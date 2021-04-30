@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,12 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   get(url: string): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json',  });
-
-      return this.http.get(url, {headers, observe: 'response'});
+      return this.http.get(url);
   }
 }
 

@@ -13,16 +13,14 @@ export class HeroComponent implements OnInit {
 
   heros: Hero[] = new Array;
 
-  constructor(private service: ServiceService, @Inject(HttpClient) private http: HttpClient) { }
+  constructor(private service: ServiceService, @Inject(HttpClient) private http: HttpClient) {}
 
   ngOnInit(): void {
     this.getHeros();
   }
 
   getHeros(){
-    
-    this.service.get(environment.urlLocal ).subscribe(result => console.log(result)); 
-
+    this.service.get(environment.URL).subscribe(result => this.heros.push(result))
   }
 
 }

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   URL: "https://k7lco97js2.execute-api.sa-east-1.amazonaws.com/prod/cliente",
-  urlLocal: "https://localhost:8080/api/cliente"
+  urlLocal: "http://localhost:8080/api/cliente"
 };
 
 /*
